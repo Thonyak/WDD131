@@ -1,0 +1,44 @@
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff; /* optional light background */
+}
+
+header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #cce5ff; /* light bluish */
+}
+
+/* Main grid (single column by default) */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Section styles */
+section {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+/* Footer styling (matching header/footer bar) */
+footer {
+    text-align: center;
+}
+
+/* Media query for screens ≥500px */
+@media screen and (min-width: 500px) {
+    header {
+        background-color: rgb(7, 7, 7);
+        color: white;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
