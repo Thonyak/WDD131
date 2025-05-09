@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: Mooli, sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+h1, h2 {
+    font-family: var(--secondary-font);
+}
+
+main h2 {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--primary-color);
+}
+
+a:link, a:visited {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+}
+
+nav ul li {
+    margin: 0.5rem 0;
+}
+
+/* Toggle class for JS */
+nav ul.open {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu button */
+#menu {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Media query: 700px */
+@media (min-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Media query: 1000px */
+@media (min-width: 1000px) {
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+    #menu {
+        display: none;
+    }
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
