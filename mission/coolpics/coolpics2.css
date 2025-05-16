@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+}
+
+#menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+nav ul.open {
+  display: block;
+}
+
+nav ul li {
+  margin: 5px 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 80%;
+  box-shadow: 0 0 20px #fff;
+}
+
+#modal.hidden {
+  display: none;
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
