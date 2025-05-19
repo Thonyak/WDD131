@@ -7,10 +7,10 @@ function changeTheme() {
 
   if (selectedTheme === 'dark') {
     body.classList.add('dark');
-    logo.src = 'byui-logo_blue.webp'; // make sure you have this image
+    logo.src = 'byui-logo_blue.webp';
   } else {
     body.classList.remove('dark');
-    logo.src = 'byui-logo_blue.webp'; // make sure you have this image
+    logo.src = 'byui-logo_blue.webp';
   }
 }
 

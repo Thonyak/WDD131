@@ -26,7 +26,7 @@ body {
   color: #0077c8;
   font-size: 16px;
   letter-spacing: 3px;
-  margin-top: 10;
+  margin-top: 10px;
   margin-bottom: 8px;
   text-transform: uppercase;
   font-weight: 500;
@@ -64,12 +64,11 @@ ol {
 }
 
 .logo img {
-  max-width: 40%;    /* limits the image width to 80% of its container */
-  height: auto;      /* keeps the aspect ratio */
-  display: block;    /* removes inline spacing */
-  margin: 0 auto;    /* centers the image horizontally */
+  max-width: 40%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
-
 
 .byu {
   font-size: 28px;
@@ -81,7 +80,7 @@ ol {
   color: #7ca1d4;
 }
 
-
+/* Dark Theme Fixes */
 .dark {
   background-color: #333;
   color: #ffffff;
@@ -93,9 +92,10 @@ ol {
 }
 
 .dark .subtitle {
-  color: #7AC9FF; 
+  color: #7AC9FF;
+}
 
 .dark .byu,
 .dark .idaho {
-  color: #cccccc; 
+  color: #cccccc;
 }
