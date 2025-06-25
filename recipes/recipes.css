@@ -191,8 +191,7 @@ footer {
     justify-content: center;
     width: 100%;
   }
-
-  .footer-credit {
+.footer-credit {
     white-space: normal;
   }
 }
