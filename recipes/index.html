@@ -19,13 +19,14 @@
     <img src="image/recipe-book.png" alt="RecipeBook Logo" class="logo" />
     <h1>RecipeBook</h1>
     <form class="search-form">
-      <input type="search" placeholder="Find a recipe" />
+      <input type="search" id="search-input" placeholder="Find a recipe" />
       <button type="submit" aria-label="Search">🔍</button>
     </form>
+    <button id="random-btn" style="margin-top: 1em;">Show Random Recipe</button>
   </header>
 
   <main>
-    <section class="recipe-card">
+    <section class="recipe-card" id="recipe-card">
       <img src="image/apple-crisp.jpg" alt="Apple Crisp dessert" />
       <div class="recipe-details">
         <span class="tag">Dessert Fruit</span>
@@ -37,7 +38,9 @@
           <span aria-hidden="true">⭐</span>
           <span aria-hidden="true">☆</span>
         </span>
-        <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+        <p class="description">
+          This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.
+        </p>
       </div>
     </section>
   </main>
@@ -49,7 +52,6 @@
       </a>
     </div>
     <div class="social">
-      <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
       <a href="#"><img src="image/instagram_icon.svg" alt="Instagram icon" /></a>
       <a href="#"><img src="image/youtube_icon.svg" alt="YouTube icon" /></a>
       <a href="#"><img src="image/pinterest_icon.svg" alt="Pinterest icon" /></a>
