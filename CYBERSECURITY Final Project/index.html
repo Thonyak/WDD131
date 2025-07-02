@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Strength & Login Demo</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h2>Create Account</h2>
+      <label for="password">Enter Password:</label>
+      <input type="password" id="password" placeholder="Enter password" />
+      <div id="strength-text"></div>
+      <div id="strength-bar"></div>
+
+      <div id="password-stats">
+        <p><strong>Password Stats:</strong></p>
+        <ul>
+          <li id="length-stat">Length: 0</li>
+          <li id="uppercase-stat">Uppercase letters: 0</li>
+          <li id="digits-stat">Digits: 0</li>
+          <li id="symbols-stat">Symbols: 0</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="section">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter username" required />
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" placeholder="Enter password" required />
+
+        <button type="submit">Login</button>
+      </form>
+
+      <p id="login-message"></p>
+
+      <div id="captcha-container" style="display: none;">
+        <label for="captcha-input">Enter the code: <strong id="captcha-code">AB12</strong></label>
+        <input type="text" id="captcha-input" placeholder="Enter CAPTCHA" />
+        <button id="verify-captcha-btn">Verify CAPTCHA</button>
+        <p id="captcha-message"></p>
+      </div>
+
+      <div id="twofa-container" style="display: none;">
+        <p>Enter the 2FA code sent to your device:</p>
+        <input type="text" id="twofa-input" placeholder="Enter 2FA code" />
+        <button id="verify-2fa-btn">Verify Code</button>
+        <p id="twofa-message"></p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="section">
+      <h2>Brute Force Attack Demo</h2>
+      <p>This demo simulates trying multiple passwords against a known username to guess the correct one.</p>
+      <button id="start-brute-btn">Start Brute Force Attack</button>
+      <p id="brute-result"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
