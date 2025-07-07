@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Recipes | My Recipe Book</title>
+  <link rel="stylesheet" href="recipe.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🍽️ My Recipe Book</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipe.html">All Recipes</a>
+      <a href="#">Favorites</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <section class="filters">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="dessert">Dessert</option>
+      <option value="dinner">Dinner</option>
+      <option value="vegan">Vegan</option>
+      <option value="fruit">Fruit</option>
+    </select>
+    <input type="text" id="searchInput" placeholder="Search recipes..." />
+  </section>
+
+  <main id="recipeContainer">
+    <!-- JavaScript renders recipes here -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Recipe Book | <a href="#">Contact</a> | <a href="#">Privacy</a></p>
+  </footer>
+
+  <script src="recipe.js"></script>
+</body>
+</html>
