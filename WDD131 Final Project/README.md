@@ -1,57 +1,31 @@
-# 🍽️ Recipe Finder App
+# 🍲 My Recipe Book
 
-## 📌 Project Summary
+A simple, responsive recipe book website built with HTML, CSS, and JavaScript. It showcases a collection of global dishes including some personal favorites from South Sudan and East Africa.
 
-The Recipe Finder App is a responsive web-based application that allows users to search for meals and view detailed recipe information such as ingredients, instructions, and images. The app is built using modern front-end technologies and integrates with a public API to dynamically fetch recipe data.
+## 📸 Screenshot
 
----
+![My Recipe Book Homepage](./screenshot.png)  
+*Screenshot of the home page with recipe cards.*
 
-## 🔧 Features
+## 📁 Features
 
-- 🔍 Search for recipes by keyword
-- 📸 View recipe image, instructions, and ingredients
-- 🎨 Responsive design using HTML and CSS
-- ⚙️ Uses JavaScript `fetch()` to get data from [TheMealDB API](https://www.themealdb.com/api.php)
-- 🖱 Dynamic DOM rendering with real-time results
+- 🔍 **Search Bar** to look up recipes
+- 🎲 **Random Recipe** button
+- 📚 **All Recipes** page with grid layout
+- ❤️ **Favorites Page** featuring selected dishes
+- 🌍 Recipes from various cultures: American, French, German, South Sudanese, and more
+- 📱 **Responsive design** for desktop and mobile
 
----
+## 🧑‍🍳 Favorite Recipes Page
 
-## 🛠 Technologies Used
+The `favorites.html` page highlights 4 of my personal favorite dishes:
+- Kisra and Combo
+- Molokhia
+- Mula lham
+- Nyama Choma
 
-- **HTML5** – Markup structure
-- **CSS3** – Styling and layout with Flexbox/Grid
-- **JavaScript (ES6+)** – API requests, event handling, DOM manipulation
-- **[TheMealDB API](https://www.themealdb.com/api.php)** – Public API for recipe data
+## 🚀 How to Run Locally
 
----
-
-## 🎯 Educational Goal
-
-This project was created for a Web Fundamentals course to demonstrate how to:
-- Work with public APIs
-- Build interactive web applications
-- Apply core web technologies (HTML, CSS, JS) in a practical, real-world scenario
-
----
-
-## 🧪 How to Use
-
-1. Open the app in your browser
-2. Type a meal name (e.g., "chicken") in the search field
-3. Click "Search" to fetch and view matching recipes
-
----
-
-## 🧠 Future Improvements
-
-- Add category filters
-- Add favorite/save feature using `localStorage`
-- Display nutritional information (if available)
-- Improve accessibility (keyboard navigation and ARIA labels)
-
----
-
-## 🙋‍♂️ Author
-
-Created by [Your Name]  
-For the Web Fundamentals Final Project at BYU–Idaho  
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/yourusername/my-recipe-book.git

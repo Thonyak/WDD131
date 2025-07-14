@@ -34,7 +34,37 @@ const recipes = [
     description: "A traditional German cake topped with tart gooseberries.",
     image: "images/german-gooseberry-cake.jpg",
     tags: ["dessert", "German", "fruit"]
+  },
+
+
+  {
+    name: "Kisra and combo",
+    description: "Classic Sudan/south Sudan paper-like flatbread made with fermented wheat flour.",
+    image: "images/Kisra-kombo.jpeg",
+    tags: ["dinner", "sudanese", "tasty"]
+  },
+  {
+    name: "Molokhia",
+    description: "Molokhia Molokhia is a meal made of Molokhia leaves cooked in a meat based soup. The scientific name of the plant is Corchorus Olitorus, also known as Jews mallow, or tossa Jute pant..",
+    image: "images/molokhia.jpg",
+    tags: ["dinner", "delicious", "easy"]
+  },
+  {
+    name: "mula lham",
+    description: "This is a delicous dish made with fresh Okra and meat.",
+    image: "images/mula lham.jpeg",
+    tags: ["dinner", "savory", "sudanese"]
+  },
+  {
+    name: "Nyama choma",
+    description: "roast meat over grill.",
+    image: "images/Nyama Choma.jpg",
+    tags: ["dinner/lunch", "meat", "beef/goat meat"]
   }
+
+
+
+
 ];
 
 // Render recipes

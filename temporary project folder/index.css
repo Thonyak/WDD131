@@ -71,10 +71,15 @@ button:disabled {
 }
 
 #password-stats ul {
-  padding-left: 20px;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style-position: inside;
+  word-break: break-word;
 }
 
-/* Attack Resistance Styles */
 .attack-section {
   margin-top: 20px;
   font-size: 14px;
@@ -111,15 +116,6 @@ button:disabled {
   font-style: italic;
   color: #555;
   font-size: 13px;
-}
-#password-stats ul {
-  padding-left: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  list-style-position: inside;
-  word-break: break-word;
 }
 
 @media screen and (max-width: 500px) {
