@@ -1,95 +1,60 @@
-# 🔐 Password Strength & Login Security Demo
+# 🔐 Password Strength & Honeypot Trap Demo 
 
-This project is a front-end web application that demonstrates password security concepts using HTML, CSS, and JavaScript. It allows users to test password strength, simulate login protection mechanisms, and visualize how resistant a password is against common hacking methods.
+## 🎓 Final Cybersecurity Project – README
 
----
-
-## 📦 Features
-
-### 🛠 Create Account Section
-- Live **password strength meter** (weak → strong)
-- Displays:
-  - Password length
-  - Number of uppercase letters, digits, and symbols
-- Dynamically updates an **Attack Resistance Scoreboard** with real-time ratings for:
-  - Brute Force
-  - Dictionary Attack
-  - Credential Stuffing
-  - Phishing
-  - Password Spraying
-  - Hash Cracking
-  - Rainbow Table Attack
-  - Keylogging
-
-### 🔐 Login Section
-- Simulates login form with validation
-- **Lockout after 3 failed attempts**
-- **CAPTCHA verification** shown after lockout
-- **2FA simulation** triggered on successful credentials
-
-### 🚨 Brute Force Attack Demo
-- Tries a list of common passwords against a hardcoded username
-- Shows how quickly weak passwords can be guessed
+This project simulates a secure login environment with enhanced defenses and an intentional honeypot trap to demonstrate how attackers can be tracked after repeated login failures. It's designed for **educational use only** to teach ethical hacking defense strategies and login hardening techniques.
 
 ---
 
-## 🧠 Technologies Used
+## 🚀 Features Overview
 
-- HTML5
-- CSS3 (Responsive)
-- JavaScript (Vanilla)
-
----
-
-## 🧪 How to Use
-
-1. **Clone the repo or download the files**
-2. Open `index.html` in your browser
-3. Explore the sections:
-   - Type a password in the Create Account area
-   - Try logging in with username `admin` and password `Admin@123`
-   - Click “Start Brute Force Attack” to test vulnerability
-4. View real-time feedback and resistance scoring
+| Feature                          | Description                                                                 |
+|----------------------------------|-----------------------------------------------------------------------------|
+| ✅ Password Strength Meter       | Visual meter showing strength based on characters, digits, symbols, etc.   |
+| 🧠 Attack Resistance Scoreboard | Displays how vulnerable the password is to various attack types            |
+| 🚫 Login Lockout System          | After 3 failed login attempts, login is disabled                            |
+| 🔐 CAPTCHA Verification          | Shown after 3 failed attempts to simulate bot protection                    |
+| ✅ 2FA Simulation                | Users must enter a 6-digit code after successful credentials                |
+| 🎯 Brute-Force Attack Demo       | Runs a dictionary attack simulation on a known password list               |
+| 🪤 Trap Page (`trap.html`)       | Fake recovery login page to simulate attacker tracking                     |
+| 📄 Trap Logs Viewer              | `trap-logs.html` displays all attacker attempts from the trap page         |
 
 ---
 
-## 🎯 Educational Goals
+## 📁 Project Structure
 
-This project teaches:
-- What makes a password weak or strong
-- Why long, complex passwords matter
-- How attackers try to break passwords
-- The importance of 2FA, CAPTCHA, and account lockouts
+
 
 ---
 
-## 🛡️ Security Concepts Visualized
+## 🧪 Instructor Testing Instructions
 
-| Method              | Explained in UI              |
-|---------------------|------------------------------|
-| Brute Force         | Entropy-based rating         |
-| Dictionary Attack   | Checks against known list    |
-| Hash Cracking       | Entropy-based simulation     |
-| Phishing/Keylogging | Behavior-level warnings      |
+To test the full system:
 
----
+1. Open `index.html`
+2. Enter incorrect credentials (anything except `admin` / `Admin@123`) **3 times**
+3. Click the red **“recovery link”**
+4. You'll land on `trap.html` (the honeypot)
+5. Enter any fake username and password
+6. A warning will appear: “⚠️ You are being tracked. Activity logged.”
+7. Open `trap-logs.html` in the same browser to view the logged attempt
 
-## 🚀 Future Improvements (Optional)
-- Integrate with HaveIBeenPwned API for real breach checks
-- Store hashed passwords locally with bcrypt.js
-- Add dark mode toggle
-- Add exportable password strength report
+> 💡 **Note:** To view the trap logs, please open `trap-logs.html` after interacting with the trap page. The logs are stored in `localStorage`, so testing must be done in the **same browser session**.
 
 ---
 
-## 👨‍💻 Author
+## ✅ Default Login Credentials
 
-**Thon Yak**  
-Cybersecurity student | BYU–Idaho  
-Project built for educational demonstration and awareness.
+- **Username:** `admin`  
+- **Password:** `Admin@123`  
+- This combination will trigger the **2FA simulation**.
 
 ---
 
-## 📜 License
+## ⚠️ Disclaimer
 
-This project is licensed for educational and non-commercial use.
+This project is for **educational purposes only** and should **not** be used to trick or deceive real users. It is intended to demonstrate concepts in:
+
+- Ethical hacking awareness  
+- Login security practices  
+- Trap-based deception and attacker tracking
