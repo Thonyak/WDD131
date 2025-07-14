@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trap Log Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .log-box {
+      background-color: white;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .log-entry {
+      background-color: #eee;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .no-logs {
+      text-align: center;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🪤 Trap Activity Log</h2>
+  <div class="log-box" id="log-container">
+    <p class="no-logs">Loading logs...</p>
+  </div>
+  <div style="text-align: center;">
+    <button onclick="clearLogs()">Clear Logs</button>
+  </div>
+
+  <script>
+    function loadLogs() {
+      const logContainer = document.getElementById("log-container");
+      const logs = JSON.parse(localStorage.getItem("trapLogs") || "[]");
+
+      logContainer.innerHTML = "";
+
+      if (logs.length === 0) {
+        logContainer.innerHTML = '<p class="no-logs">No trap logs recorded yet.</p>';
+        return;
+      }
+
+      logs.forEach(entry => {
+        const div = document.createElement("div");
+        div.className = "log-entry";
+        div.textContent = entry;
+        logContainer.appendChild(div);
+      });
+    }
+
+    function clearLogs() {
+      if (confirm("Clear all trap logs?")) {
+        localStorage.removeItem("trapLogs");
+        loadLogs();
+      }
+    }
+
+    // Load logs on page load
+    loadLogs();
+  </script>
+</body>
+</html>
